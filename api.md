@@ -1,0 +1,222 @@
+#all options for curl.get function
+
+-     abstract_unix_socket <path> Connect via abstract Unix domain socket
+-     anyauth       Pick any authentication method
+- a, append        Append to target file when uploading
+-     basic         Use HTTP Basic Authentication
+-     cacert <file> CA certificate to verify peer against
+-     capath <dir>  CA directory to verify peer against
+- E, cert <certificate[:password]> Client certificate file and password
+-     cert_status   Verify the status of the server certificate
+-     cert_type <type> Certificate file type (DER/PEM/ENG)
+-     ciphers <list of ciphers> SSL ciphers to use
+-     compressed    Request compressed response
+-     compressed_ssh Enable SSH compression
+- K, config <file> Read config from a file
+-     connect_timeout <seconds> Maximum time allowed for connection
+-     connect_to <HOST1:PORT1:HOST2:PORT2> Connect to host
+- C, continue_at <offset> Resumed transfer offset
+- b, cookie <data> Send cookies from string/file
+- c, cookie_jar <filename> Write cookies to <filename> after operation
+-     create_dirs   Create necessary local directory hierarchy
+-     crlf          Convert LF to CRLF in upload
+-     crlfile <file> Get a CRL list in PEM format from the given file
+- d, data <data>   HTTP POST data
+-     data_ascii <data> HTTP POST ASCII data
+-     data_binary <data> HTTP POST binary data
+-     data_raw <data> HTTP POST data, '@' allowed
+-     data_urlencode <data> HTTP POST data url encoded
+-     delegation <LEVEL> GSS_API delegation permission
+-     digest        Use HTTP Digest Authentication
+- q, disable       Disable .curlrc
+-     disable_eprt  Inhibit using EPRT or LPRT
+-     disable_epsv  Inhibit using EPSV
+-     disallow_username_in_url Disallow username in url
+-     dns_interface <interface> Interface to use for DNS requests
+-     dns_ipv4_addr <address> IPv4 address to use for DNS requests
+-     dns_ipv6_addr <address> IPv6 address to use for DNS requests
+-     dns_servers <addresses> DNS server addrs to use
+-     doh_url <URL> Resolve host names over DOH
+- D, dump_header <filename> Write the received headers to <filename>
+-     egd_file <file> EGD socket path for random data
+-     engine <name> Crypto engine to use
+-     expect100_timeout <seconds> How long to wait for 100_continue
+- f, fail          Fail silently (no output at all) on HTTP errors
+-     fail_early    Fail on first transfer error, do not continue
+-     false_start   Enable TLS False Start
+- F, form <name=content> Specify multipart MIME data
+-     form_string <name=string> Specify multipart MIME data
+-     ftp_account <data> Account data string
+-     ftp_alternative_to_user <command> String to replace USER [name]
+-     ftp_create_dirs Create the remote dirs if not present
+-     ftp_method <method> Control CWD usage
+-     ftp_pasv      Use PASV/EPSV instead of PORT
+- P, ftp_port <address> Use PORT instead of PASV
+-     ftp_pret      Send PRET before PASV
+-     ftp_skip_pasv_ip Skip the IP address for PASV
+-     ftp_ssl_ccc   Send CCC after authenticating
+-     ftp_ssl_ccc_mode <active/passive> Set CCC mode
+-     ftp_ssl_control Require SSL/TLS for FTP login, clear for transfer
+- G, get           Put the post data in the URL and use GET
+- g, globoff       Disable URL sequences and ranges using {} and []
+-     happy_eyeballs_timeout_ms <milliseconds> How long to wait in milliseconds for IPv6 before trying IPv4
+-     haproxy_protocol Send HAProxy PROXY protocol v1 header
+- I, head          Show document info only
+- H, header <header/@file> Pass custom header(s) to server
+- h, help          This help text
+-     hostpubmd5 <md5> Acceptable MD5 hash of the host public key
+-     http0.9       Allow HTTP 0.9 responses
+- 0, http1.0       Use HTTP 1.0
+-     http1.1       Use HTTP 1.1
+-     http2         Use HTTP 2
+-     http2_prior_knowledge Use HTTP 2 without HTTP/1.1 Upgrade
+-     ignore_content_length Ignore the size of the remote resource
+- i, include       Include protocol response headers in the output
+- k, insecure      Allow insecure server connections when using SSL
+-     interface <name> Use network INTERFACE (or address)
+- 4, ipv4          Resolve names to IPv4 addresses
+- 6, ipv6          Resolve names to IPv6 addresses
+- j, junk_session_cookies Ignore session cookies read from file
+-     keepalive_time <seconds> Interval time for keepalive probes
+-     key <key>     Private key file name
+-     key_type <type> Private key file type (DER/PEM/ENG)
+-     krb <level>   Enable Kerberos with security <level>
+-     libcurl <file> Dump libcurl equivalent code of this command line
+-     limit_rate <speed> Limit transfer speed to RATE
+- l, list_only     List only mode
+-     local_port <num/range> Force use of RANGE for local port numbers
+- L, location      Follow redirects
+-     location_trusted Like location, and send auth to other hosts
+-     login_options <options> Server login options
+-     mail_auth <address> Originator address of the original email
+-     mail_from <address> Mail from this address
+-     mail_rcpt <address> Mail to this address
+- M, manual        Display the full manual
+-     max_filesize <bytes> Maximum file size to download
+-     max_redirs <num> Maximum number of redirects allowed
+- m, max_time <seconds> Maximum time allowed for the transfer
+-     metalink      Process given URLs as metalink XML file
+-     negotiate     Use HTTP Negotiate (SPNEGO) authentication
+- n, netrc         Must read .netrc for user name and password
+-     netrc_file <filename> Specify FILE for netrc
+-     netrc_optional Use either .netrc or URL
+- :, next          Make next URL use its separate set of options
+-     no_alpn       Disable the ALPN TLS extension
+- N, no_buffer     Disable buffering of the output stream
+-     no_keepalive  Disable TCP keepalive on the connection
+-     no_npn        Disable the NPN TLS extension
+-     no_sessionid  Disable SSL session_ID reusing
+-     noproxy <no_proxy_list> List of hosts which do not use proxy
+-     ntlm          Use HTTP NTLM authentication
+-     ntlm_wb       Use HTTP NTLM authentication with winbind
+-     oauth2_bearer <token> OAuth 2 Bearer Token
+- o, output <file> Write to file instead of stdout
+-     pass <phrase> Pass phrase for the private key
+-     path_as_is    Do not squash .. sequences in URL path
+-     pinnedpubkey <hashes> FILE/HASHES Public key to verify peer against
+-     post301       Do not switch to GET after following a 301
+-     post302       Do not switch to GET after following a 302
+-     post303       Do not switch to GET after following a 303
+-     preproxy [protocol://]host[:port] Use this proxy first
+- #, progress_bar  Display transfer progress as a bar
+-     proto <protocols> Enable/disable PROTOCOLS
+-     proto_default <protocol> Use PROTOCOL for any URL missing a scheme
+-     proto_redir <protocols> Enable/disable PROTOCOLS on redirect
+- x, proxy [protocol://]host[:port] Use this proxy
+-     proxy_anyauth Pick any proxy authentication method
+-     proxy_basic   Use Basic authentication on the proxy
+-     proxy_cacert <file> CA certificate to verify peer against for proxy
+-     proxy_capath <dir> CA directory to verify peer against for proxy
+-     proxy_cert <cert[:passwd]> Set client certificate for proxy
+-     proxy_cert_type <type> Client certificate type for HTTPS proxy
+-     proxy_ciphers <list> SSL ciphers to use for proxy
+-     proxy_crlfile <file> Set a CRL list for proxy
+-     proxy_digest  Use Digest authentication on the proxy
+-     proxy_header <header/@file> Pass custom header(s) to proxy
+-     proxy_insecure Do HTTPS proxy connections without verifying the proxy
+-     proxy_key <key> Private key for HTTPS proxy
+-     proxy_key_type <type> Private key file type for proxy
+-     proxy_negotiate Use HTTP Negotiate (SPNEGO) authentication on the proxy
+-     proxy_ntlm    Use NTLM authentication on the proxy
+-     proxy_pass <phrase> Pass phrase for the private key for HTTPS proxy
+-     proxy_pinnedpubkey <hashes> FILE/HASHES public key to verify proxy with
+-     proxy_service_name <name> SPNEGO proxy service name
+-     proxy_ssl_allow_beast Allow security flaw for interop for HTTPS proxy
+-     proxy_tls13_ciphers <ciphersuite list> TLS 1.3 proxy cipher suites
+-     proxy_tlsauthtype <type> TLS authentication type for HTTPS proxy
+-     proxy_tlspassword <string> TLS password for HTTPS proxy
+-     proxy_tlsuser <name> TLS username for HTTPS proxy
+-     proxy_tlsv1   Use TLSv1 for HTTPS proxy
+- U, proxy_user <user:password> Proxy user and password
+-     proxy1.0 <host[:port]> Use HTTP/1.0 proxy on given port
+- p, proxytunnel   Operate through an HTTP proxy tunnel (using CONNECT)
+-     pubkey <key>  SSH Public key file name
+- Q, quote         Send command(s) to server before transfer
+-     random_file <file> File for reading random data from
+- r, range <range> Retrieve only the bytes within RANGE
+-     raw           Do HTTP "raw"; no transfer decoding
+- e, referer <URL> Referrer URL
+- J, remote_header_name Use the header_provided filename
+- O, remote_name   Write output to a file named as the remote file
+-     remote_name_all Use the remote file name for all URLs
+- R, remote_time   Set the remote file's time on the local output
+- X, request <command> Specify request command to use
+-     request_target Specify the target for this request
+-     resolve <host:port:address[,address]...> Resolve the host+port to this address
+-     retry <num>   Retry request if transient problems occur
+-     retry_connrefused Retry on connection refused (use with retry)
+-     retry_delay <seconds> Wait time between retries
+-     retry_max_time <seconds> Retry only within this period
+-     sasl_ir       Enable initial response in SASL authentication
+-     service_name <name> SPNEGO service name
+- S, show_error    Show error even when s is used
+- s, silent        Silent mode
+-     socks4 <host[:port]> SOCKS4 proxy on given host + port
+-     socks4a <host[:port]> SOCKS4a proxy on given host + port
+-     socks5 <host[:port]> SOCKS5 proxy on given host + port
+-     socks5_basic  Enable username/password auth for SOCKS5 proxies
+-     socks5_gssapi Enable GSS_API auth for SOCKS5 proxies
+-     socks5_gssapi_nec Compatibility with NEC SOCKS5 server
+-     socks5_gssapi_service <name> SOCKS5 proxy service name for GSS_API
+-     socks5_hostname <host[:port]> SOCKS5 proxy, pass host name to proxy
+- Y, speed_limit <speed> Stop transfers slower than this
+- y, speed_time <seconds> Trigger 'speed_limit' abort after this time
+-     ssl           Try SSL/TLS
+-     ssl_allow_beast Allow security flaw to improve interop
+-     ssl_no_revoke Disable cert revocation checks (Schannel)
+-     ssl_reqd      Require SSL/TLS
+- 2, sslv2         Use SSLv2
+- 3, sslv3         Use SSLv3
+-     stderr        Where to redirect stderr
+-     styled_output Enable styled output for HTTP headers
+-     suppress_connect_headers Suppress proxy CONNECT response headers
+-     tcp_fastopen  Use TCP Fast Open
+-     tcp_nodelay   Use the TCP_NODELAY option
+- t, telnet_option <opt=val> Set telnet option
+-     tftp_blksize <value> Set TFTP BLKSIZE option
+-     tftp_no_options Do not send any TFTP options
+- z, time_cond <time> Transfer based on a time condition
+-     tls_max <VERSION> Set maximum allowed TLS version
+-     tls13_ciphers <list of TLS 1.3 ciphersuites> TLS 1.3 cipher suites to use
+-     tlsauthtype <type> TLS authentication type
+-     tlspassword   TLS password
+-     tlsuser <name> TLS user name
+- 1, tlsv1         Use TLSv1.0 or greater
+-     tlsv1.0       Use TLSv1.0 or greater
+-     tlsv1.1       Use TLSv1.1 or greater
+-     tlsv1.2       Use TLSv1.2 or greater
+-     tlsv1.3       Use TLSv1.3 or greater
+-     tr_encoding   Request compressed transfer encoding
+-     trace <file>  Write a debug trace to FILE
+-     trace_ascii <file> Like trace, but without hex output
+-     trace_time    Add time stamps to trace/verbose output
+-     unix_socket <path> Connect through this Unix domain socket
+- T, upload_file <file> Transfer local FILE to destination
+-     url <url>     URL to work with
+- B, use_ascii     Use ASCII/text transfer
+- u, user <user:password> Server user and password
+- A, user_agent <name> Send User_Agent <name> to server
+- v, verbose       Make the operation more talkative
+- V, version       Show version number and quit
+- w, write_out <format> Use output FORMAT after completion
+-     xattr         Store metadata in extended file attributes
