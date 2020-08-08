@@ -23,7 +23,7 @@ with open(path.join(here, 'README.md')) as f:
 ## Setup
 
 setup(
-    name='cUrl',
+    name='cURL-light',
     version=__version__,
     author='Kavindu Santhusa',
     author_email='kavindusanthusa@gmail.com',
@@ -37,7 +37,7 @@ setup(
     long_description=long_description,
     long_description_content_type='text/markdown',
     platforms='any',
-    provides=['cURL'],
+    provides=['cURL_light'],
     py_modules=['curl'],
     scripts=['curl.py'],
     zip_safe=True,
