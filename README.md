@@ -2,8 +2,7 @@
 python library for transferring data specified with URL syntax using cURL.
 Curl is a python library and a command line tool for transferring data 
 specified with URLsyntax. Find out how to use curl by reading the curl  
-help page or the MANUAL document. Find out how to install Curl by reading 
-the INSTALL document.
+help page or the [api](https://github.com/Ksengine/cURL-light/blob/master/api.md)
 
 libcurl is the library curl is using to do its job. its heavy for python
 *so I made this for you**
